@@ -30,4 +30,4 @@ ARTIST(<u>ArtistID</u>,CName,Bio)
 
 ## Entity Relationship Model
 
-[ERD](MoviesTonightERD.png)
+![ERD](MoviesTonightERD.png)
