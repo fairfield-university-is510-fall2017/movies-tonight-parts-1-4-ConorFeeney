@@ -10,6 +10,8 @@ TABLE(<u>TName</u>,Location,Phone,<u>MTitle</u>,<u>ShowTime</u>,Rating,<u>CCode<
 ### 2NF Conversion
 Tname-->(Location, Phone)
 MTitle-->(Rating)
+MTitle -->-->(CCode,CName)
+(TName,ShowTime)-->MTitle
 
 THEATERS(<u>TName</u>,Location,Phone)
 MOVIES(<u>MTitle</u>,Rating)
