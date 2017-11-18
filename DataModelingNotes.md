@@ -18,16 +18,14 @@ SHOWS(<u>TName</u>,MTitle,ShowTime)
 ARTIST(<u>CName</u>,Bio)
 
 ### 3NF Conversion
-We have a transitive dependency in the form of:
-Location-->(Phone)
+Already 3NF
 
 Added Surrogate keys for ease
 
-THEATERS(<u>TID</u>, TName,*Phone*)
-LOC(<u>Phone</u>,Location)
+THEATERS(<u>TID</u>, Location,*Phone*)
 MOVIES(<u>MID</u>,MTitle,Rating)
-CREDITS(<u>*MID*</u>,*ArtistID* CCode,CName)
-SHOWS(<u>*TID*</u>,MID,ShowTime)
+CREDITS(<u>*MID*</u>,*ArtistID* CCode)
+SHOWS(<u>*SID*</u>*TID*,*MID*,ShowTime)
 ARTIST(<u>ArtistID</u>,CName,Bio)
 
 ## Entity Relationship Model
