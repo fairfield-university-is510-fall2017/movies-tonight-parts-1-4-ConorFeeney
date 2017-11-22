@@ -17,10 +17,10 @@ CREATE TABLE MOVIES (
  PRIMARY KEY (`MID`)
 );
 
+
 CREATE TABLE ARTIST (
  AID int(11) NOT NULL auto_increment,
- MTitle varchar(255) default NULL,
- Rating varchar(255) default NULL,
+ CName varchar(255) default NULL,
  PRIMARY KEY (AID)
 );
 
@@ -56,6 +56,12 @@ ALTER TABLE `CREDITS`
   ADD FOREIGN KEY CREDITS_ARTIST (`AID`)
     REFERENCES `ARTIST` (`AID`);
     
+Alter table Theater
+MODIFY Column Phone varchar(20) default null;    
+/*alter table `credits`
+drop foreign key `credits_ibfk_2`;
+drop table artist;
+*/
 show tables;
 describe movies;
 describe credits;
